@@ -1,0 +1,237 @@
+.div-height {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://www.eliteproinfra.com/front/images/sub-header/about-us.jpg);
+    height: 45rem;
+    background-repeat: no-repeat;
+}
+
+.headline {
+    font-size: 3rem;
+    margin-left: 15rem;
+    padding-top: 20rem;
+}
+
+.comm-headline {
+    color: #fff !important;
+}
+
+.promodemo-section {
+    position: relative;
+    background: #1b1b1b;
+    margin-top: 35px;
+    padding: 35px 0;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-xl-5 .col-lg-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.promodemo-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.section-title.v2 {
+    text-align: left;
+
+}
+
+.section-title.v2 h2 {
+    text-align: center;
+
+}
+
+
+.promodemo-text {
+    box-sizing: border-box;
+    color: #fff !important;
+}
+
+.promodemo-text p {
+    line-height: 1.8;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.pt-5 {
+    padding-top: 3rem !important;
+}
+
+.col-sm-4 .col-6 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.counterdemo-text {
+    text-align: center;
+    color: #fff !important;
+}
+
+.counterdemo-text.v2 i {
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.counterdemo-text.v2 h6 {
+    font-size: 30px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.counterdemo-text.v2 p {
+    color: #e9e9e9;
+    font-size: 16px;
+}
+
+.col-xl-7 .col-lg-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.textset {
+    position: relative;
+    width: 50%;
+    min-height: 1px;
+    /* padding-right: 15px; */
+    padding-left: 15px;
+    text-align: justify;
+}
+
+.promodemo-content-wrap {
+    display: flex !important;
+    justify-content: space-evenly !important;
+    flex-wrap: wrap !important;
+    row-gap: 2rem !important;
+}
+
+.promodemo-content {
+    box-shadow: 0 0 11px 0 rgba(38, 59, 94, .12);
+    border-radius: 5px;
+    padding: 25px;
+    width: 33rem;
+}
+
+.promodemo-content p {
+    color: black;
+    text-align: justify;
+}
+
+.promodemo-content:first-child h4 {
+    color: #ffffff;
+}
+
+.promodemo-content:nth-child(4) h4 {
+    color: #fff;
+}
+
+.promodemo-content:first-child {
+    background: #b63d3d;
+}
+
+.promodemo-content:nth-child(2) {
+    background: #dbd878;
+}
+
+.promodemo-content:nth-child(3) {
+    background: #3e8f7c;
+}
+
+.promodemo-content:nth-child(4) {
+    background: #589be1;
+}
+
+.shiftimage {
+    display: flex;
+    /* flex-direction: row; */
+    column-gap: 3rem;
+}
+
+.imageabout {
+    width: 45rem;
+    height: 34rem;
+    /* float: left; */
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 360px) {
+    .promodemo-content {
+        width: 24rem;
+    }
+
+    .promodemo-section {
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .comm-headline {
+        margin-left: -10rem !important;
+    }
+
+    .promodemo-section {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .textset {
+        width: 90%;
+        padding-right: 15px;
+       
+    }
+}
+@media screen and (max-width: 992px) {
+    .textset {
+        width: 100%;
+        padding-right: 15px;
+
+       
+    }
+}
+@media screen and (max-width: 540px) {
+    .imageabout {
+        width: 32rem;
+        height: 34rem;
+        margin-left: -2rem;
+    }
+}
+@media screen and (max-width: 385px) {
+    .imageabout {
+        width: 25rem;
+        height: 30rem;
+    }
+}
+@media screen and (max-width: 305px) {
+    .imageabout {
+        width: 20rem;
+        height: 26rem;
+        margin-left: -2rem;
+    }
+}

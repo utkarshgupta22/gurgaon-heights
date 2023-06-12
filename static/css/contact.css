@@ -1,0 +1,201 @@
+.div-height {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0%)), url(https://www.eliteproinfra.com/front/images/sub-header/contact.jpg);
+    height: 45rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100% !important;
+    object-fit: fill !important;
+}
+
+.headline {
+    font-size: 3rem;
+    margin-left: 15vw;
+    padding-top: 20rem;
+}
+
+.comm-headline {
+    color: #fff !important;
+}
+
+.contact-page-section-space {
+    padding: 50px 0;
+}
+
+.section-padding {
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.row {
+    /* display: flex; */
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 3rem !important;
+}
+
+.col-lg-3 .col-md-3 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+.contactDetails {
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #ccc;
+    height: 220px;
+    border-radius: 15px;
+    z-index: 13;
+    background: #fff;
+    color: #1b1b1b;
+    cursor: pointer;
+    position: relative;
+    transition: transform .2s, box-shadow .2s;
+    will-change: transform, box-shadow;
+    box-shadow: 1px 3px 3px 1px rgb(0 0 0 / 15%);
+}
+
+.contact_us_Details{
+    border: 1px solid #ccc;
+    color: #1b1b1b;
+    cursor: pointer;
+    padding: 15px;
+    box-shadow: 1px 3px 3px 1px rgb(0 0 0 / 15%);
+    border-radius: 20px;
+    width: 22%;
+    text-align: center;
+    font-size: large;
+    font-family: sans-serif;
+}
+.contact_us_Details i {
+    font-size: 25px;
+    color: #b49141;
+}
+.contact_us_info_design{
+    display: flex;
+     column-gap: 2rem;
+    justify-content: space-between; 
+}
+.col-lg-6 .col-md-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.section-title.content {
+    text-align: left;
+}
+
+.section-title.content h2 {
+    font-weight: 600;
+    line-height: 0.1em;
+    color: #b49141;
+    margin-bottom: 19px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form-control-wrap {
+    margin-top: -32px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group .form-control {
+    display: block;
+    width: 100%;
+    font-size: large;
+    line-height: 1.5;
+    color: #22272d !important;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #b6c1cd;
+    border-radius: 0.25rem;
+}
+
+.btn-show {
+    color: #fff;
+    background-color: #b49141;
+    border: 1px solid #b6c1cd;
+    border-radius: 1rem !important;
+    padding: 1rem;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .col-lg-3 .col-md-3 {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      row-gap: 2rem;
+    }
+
+}
+
+@media screen and (max-width:1085px) {
+    .contact_us_Details{
+        width: 48% !important;
+    }
+}
+
+@media screen and (max-width:991px){
+    .contactDetails{
+        width: 48%;
+    }
+    .contact_services{
+        width: 47% !important;
+    display: flex;
+    }
+    .div_design{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1084px){
+    .contact_us_info_design{
+        width: 85%;
+        margin: auto !important;
+        column-gap: 0rem !important;
+    justify-content: center !important; 
+    margin-top: 5rem !important;
+    }
+    .contact_us_Details{
+        margin: 8px !important;
+    }
+
+    .form-cont{
+        /* width: 50% !important; */
+        display: flex;
+        justify-content: center;
+        /* margin: auto !important; */
+    }
+    
+    .form-cont h2{
+        text-align: center !important;
+        margin-top: 40px !important;
+    }
+}

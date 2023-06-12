@@ -1,0 +1,110 @@
+.div-height {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://www.eliteproinfra.com/front/images/sub-header/residential.jpg);
+    height: 45rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100% !important;
+    object-fit: fill !important;
+}
+
+.headline {
+    font-size: 4em;
+    margin-left: 15vw;
+    padding-top: 20rem;
+}
+
+.comm-headline {
+    color: #fff !important;
+}
+
+.shiftcomm {
+    margin-top: 6rem;
+}
+
+.listing_div {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    font-size: 16px;
+}
+
+.feature-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    color: white;
+}
+
+.img-responsive {
+    z-index: 10;
+    height : 22rem !important;
+}
+
+.feature-text li {
+    font-weight: 500;
+    margin: 0 3px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    background-color: #b49141;
+    display: inline-block;
+    padding: 3px 6px;
+    text-align: center;
+}
+
+.feature-text-item2 {
+    background-color: #b49141;
+}
+
+.product-rating li {
+    display: inline-block;
+    line-height: 1;
+    cursor: text;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination a {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .pagination a.active {
+    background-color: #ccc;
+  }
+
+/* .listing_img_height{
+    height : 22rem !important;
+} */
+@media screen and (max-width:585px) {
+    .listing_div{
+    margin-left: 10rem !important;
+    margin-right: 10rem !important;
+    }
+}
+@media screen and (max-width:485px) {
+    .listing_div{
+    margin-left: 6rem !important;
+    margin-right: 6rem !important;
+    }
+}
+@media screen and (max-width:365px) {
+    .listing_div{
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+    }
+}
+@media screen and (max-width:315px) {
+    .listing_div{
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    }
+}

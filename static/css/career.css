@@ -1,0 +1,33 @@
+.div-height {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://www.eliteproinfra.com/front/images/sub-header/career.jpg);
+    height: 45rem;
+    background-repeat: no-repeat;
+}
+
+.headline {
+    font-size: 3rem;
+    margin-left: 15rem;
+    padding-top: 20rem;
+}
+
+.comm-headline {
+    color: #fff !important;
+}
+
+.headingdetails {
+    text-align: center !important;
+    margin-top: 12rem;
+    height: 15rem;
+}
+.headingdetails h5{
+
+ 
+    font-weight: 700;
+  
+}
+
+@media screen and (max-width: 460px) {
+    .headline {
+        margin-left: 4rem !important;
+    }
+}

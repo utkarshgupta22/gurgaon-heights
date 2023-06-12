@@ -1,0 +1,511 @@
+section.alldetails-2b {
+    padding-top: 35px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-lg-8 .col-sm-12 .col-md-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: black;
+    border-color: #caaead;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid transparent;
+    width: 12rem;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 5px;
+
+}
+
+.list-alldetails-wrap {
+    box-sizing: border-box;
+}
+
+.alldetails-listing-heading {
+    padding: 4px 15px;
+    border-bottom: 1px solid #e3e3e3;
+    background: #b49141;
+    border-radius: 15px 15px 0px 0px;
+    color: #fff;
+}
+
+.list-alldetails-section {
+    background: #f7f7f7;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    color: #000000;
+    font-family: system-ui;
+    border-radius: 0px 0px 20px 20px;
+    border-left: 1px solid #b4914140;
+    border-right: 1px solid #b4914140;
+}
+
+.alldetails-amenities-list {
+    border: 1px solid #fff;
+    padding: 20px;
+    background-color: #e6e6fa;
+    box-shadow: 0 4px 6px 0 transparent;
+    border-radius: 15px;
+    text-align: center;
+    width: 31.9%;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.alldetails-amenities-list h4 {
+    font-size: small;
+    line-height: 30px;
+}
+
+.alldetails-section h4 {
+    line-height: 1;
+    margin-bottom: 15px;
+    font-family: 'Visby CF Demi';
+    color: #000;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.alldetails-1c h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    line-height: 25px;
+}
+
+.alldetails-1d {
+    font-size: 14px;
+    color: #666;
+    margin-top: 7px;
+    line-height: 25px;
+}
+
+.alldetails-hr {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.alldetails-price-top-1 {
+    padding: 13px 0 0;
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.alldetails-onwards-price {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.checked {
+    color: orange;
+}
+
+.alldetails-status {
+    margin: 14px 0 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.alldetails-status span {
+    color: #333;
+    font-weight: 600;
+}
+
+.alldetails-project-size {
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 7%);
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #666;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+}
+
+.alldetails-project-size img {
+    margin-right: 15px;
+}
+
+table.alldetails-project-size-table span {
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+ul.alldetails-project-size-list li {
+    margin-right: 14px;
+    list-style: disc;
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+button.alldetails-request-call-back {
+    padding: 8px 15px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    background: #b49141;
+    color: #fff;
+    border: 1px solid #b49141;
+    margin-left: 25%;
+    margin-right: 25%;
+    line-height: 1.42857143;
+    border-radius: 5px;
+    transition: .5s;
+    cursor: inherit;
+    margin-bottom: 3rem !important;
+}
+
+button.alldetails-request-call-back i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.col-md-3 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-md-3.about-prop img {
+    border: 1px solid #b49141;
+    padding: 5px;
+    border-radius: 10px;
+    width: 15rem;
+}
+
+.list-alldetails-wrap p {
+    font-size: 15px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+
+.col-md-9 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+div#accordion1 {
+    margin-top: 20px;
+}
+
+.faq-section .card-header>a[aria-expanded="false"]::before {
+    color: #888;
+    content: "\f068";
+    font-family: 'FontAwesome';
+    float: right !important;
+    font-size: 14px;
+}
+
+.faq-section .card {
+    background-color: transparent;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.faq-section .card-body {
+    padding: 30px 10px;
+    color: #333;
+    font-family: system-ui;
+    line-height: 25px;
+}
+
+.faq-section .card-header>a {
+    border-color: #f1f1f1;
+    color: #141414;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    padding: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: system-ui;
+}
+
+.listing-sidebar .widget {
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(221, 221, 221, 0.56);
+}
+
+.widget-title {
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-family: 'Visby CF Demi';
+}
+
+.phone {
+    display: inline-block;
+    animation: ring 4s .7s ease-in-out infinite;
+    color: #b49141;
+}
+
+input {
+    padding: 10px 0;
+    font-size: 13px;
+    background: #000;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.mortgage-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.mortgage-group input {
+    background: #ffffff;
+    color: #000 !important;
+}
+
+.mortgage-field {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    line-height: 1;
+    border-radius: 3px;
+    width: 100%;
+}
+
+label.alldetails-form-checked-whatsapp {
+    color: #666;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.mortgage-btn button {
+    border: 1px solid transparent;
+    background: #b49141;
+    color: #fff !important;
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.popup-vid {
+    position: relative;
+}
+
+.row.map-down-pad {
+    padding-top: 20px;
+}
+
+.map-down-right {
+    float: left;
+    width: 10%;
+}
+
+.map-down-left {
+    float: left;
+    width: 90%;
+}
+.map-down-left h4 {
+    font-size: 15px;
+    color: #444;
+    /* padding-bottom: 15px;
+    border-bottom: 1px solid #ccc; */
+}
+
+
+@media screen and (max-width: 992px) {
+    .list-alldetails-section .amenitiesshift {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .alldetails-amenities-list {
+        width: 20rem !important;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .btn {
+        width: 14rem !important;
+    }
+
+}
+
+@media screen and (max-width: 335px) {
+    .col-md-3.about-prop img {
+        width: 11rem !important;
+    }
+
+    .btn {
+        width: 12rem !important;
+        margin-left: -3rem;
+    }
+
+}
+
+
+
+
+
+
+.carousel-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .carousel-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    display: none;
+  }
+  
+  .carousel-item.active {
+    display: block;
+  }
+  
+  .carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .carousel-thumbnail {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-thumbnail.active {
+    border: 2px solid black;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carousel-prev {
+    left: 0;
+  }
+  
+  .carousel-next {
+    right: 0;
+  }
+
+  .thumbnail_image_div{
+    width: 20% !important;
+    height: 13rem !important;
+  }
+  .thumbnail_image{
+    width: 100% !important;
+    height: 13rem !important;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .carousel-container {
+      max-width: 600px;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    .carousel-container {
+      max-width: 300px;
+    }
+    
+    .carousel-thumbnail {
+      margin: 0 2.5px;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .thumbnail_image_div{
+        width: 30% !important;
+    }
+  }
