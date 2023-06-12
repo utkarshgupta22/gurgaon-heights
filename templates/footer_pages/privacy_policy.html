@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<style>
+    .privacy h2{
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 15rem !important;
+    }
+
+    .content{
+        width: 70%;
+        margin: auto;
+    }
+    .content p{
+        text-align: center;
+    }
+    .content ol{
+        text-align: justify;
+        color: black; 
+        margin-top:30px;
+        margin-bottom: 30px;
+    }
+    .bottom_p{
+        margin-bottom: 50px;
+    }
+    .content ol li{
+        margin-bottom: 15px;
+    }
+</style>
+<section class="privacy">
+    <h2>Privacy Policy</h2>
+    <div class="content">
+        <p>At Gurgaon Heights, we take your privacy very seriously. We are committed to protecting the privacy and confidentiality of your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information.</p>
+        <ol type="1">
+            <li><b>Collection of Information:</b> We may collect personal information from you when you use our website, contact us via email or phone, or visit our office. The personal information we may collect includes your name, address, phone number, email address, and other details relevant to your real estate needs.</li>
+
+            <li><b>Use of Information:</b>We use your personal information to provide you with our real estate services and to communicate with you regarding your real estate needs. We may also use your personal information for marketing purposes and to improve our services.</li>
+
+            <li><b>Disclosure of Information:</b>We may disclose your personal information to third-party service providers who assist us in providing our real estate services, such as legal advisors, mortgage brokers, and property inspectors. We may also disclose your personal information to government authorities if required by law.</li>
+
+            <li><b>Security:</b>We take appropriate measures to safeguard your personal information from unauthorized access, use, or disclosure. We use industry-standard security protocols to protect your personal information.</li>
+
+            <li><b>Consent:</b>By using our website, contacting us via email or phone, or visiting our office, you consent to the collection, use, and disclosure of your personal information as outlined in this Privacy Policy.</li>
+
+            <li><b>Access and Correction:</b>You have the right to access and correct your personal information held by us. If you wish to access or correct your personal information, please contact us via email or phone.</li>
+
+            <li><b>Changes to this Privacy Policy:</b>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the updated Privacy Policy on our website.</li>
+        </ol>
+        <p class="bottom_p">If you have any questions or concerns regarding our Privacy Policy, please contact us via email or phone.</p>
+    </div>
+
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}

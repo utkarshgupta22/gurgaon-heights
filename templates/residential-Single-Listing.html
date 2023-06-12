@@ -1,0 +1,350 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/residentialSingleListing.css" />
+
+<Section class="alldetails" style="margin-top : 10rem">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 col-xl-8 col-md-12">
+                <div class="alldetails-image-gallery">
+                    <div class="alldetails-slider">
+                        <div id="gallery" class="list-alldetails-section">
+                            <!--Carousel Wrapper-->
+                            <div class="carousel-container">
+                                <div class="carousel-main all_images">
+                                    {% for each in property.image.all%}
+                                  <div class="carousel-item single_image " style="width: 95%;">
+                                    <img class="d-block w-100" style="width:100%;" src="{{each.image.url }}"  alt="First slide">
+                                  </div>
+                                  {% endfor %}
+                                 
+                                </div>
+                                <div class="carousel-thumbnails">
+                                {% for each in property.image.all %}
+                                  <div class="carousel-thumbnail thumbnail_image_div ">
+                                    <img class="thumbnail_image" src="{{each.image.url }}" alt="Slide 1 Thumbnail">
+                                  </div>
+                                {% endfor %}
+                                </div>
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-sm-12 col-xl-4 col-md-12">
+                <div class="alldetails-1c">
+                    <h1>{{property.title}}</h1>
+                </div>
+                <div class="alldetails-1d">
+                    <span class="top-map-marker"><i class="fa fa-map-marker"></i></span> <span>{{property.location}}, {{property.city}}
+                    </span>
+                </div>
+                <div class="alldetails-hr"></div>
+                <div class="alldetails-price-top">
+                    <div class="alldetails-price-top-1">
+                        <span class="alldetails-price-currency">₹</span>
+                        <span class="alldetails-min-price">{{property.area_min}} to {{property.area_max}} CR*</span>
+                    </div>
+                    <div class="alldetails-onwards-price">₹ {{property.psf}} Per Sq. Ft Onwards</div>
+                    <div class="alldetails-rating-sec">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span>
+                            <a class="alldetails-rating-5" href="#">
+                                {{property.rating}} ratings
+                            </a>
+                        </span>
+                    </div>
+                    <div class="alldetails-status">Status: <span>{{property.status}}</span></div>
+
+                    <!-- Project-Size-1 -->
+                    <div class="alldetails-project-size">
+                        <table class="alldetails-project-size-table">
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2"> <img
+                                            src="https://www.eliteproinfra.com/front/images/details-new/icon-2.png">
+                                    </td>
+                                    <td> <span>Project Size</span> </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul class="alldetails-project-size-list">
+                                            <li style="color: #000;">{{property.area_min}} to {{property.area_max}} Sq. Ft.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Project-Size-2 -->
+                    <div class="alldetails-project-size">
+                        <table class="alldetails-project-size-table">
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2"> <img
+                                            src="https://www.eliteproinfra.com/front/images/details-new/icon-1.png">
+                                    </td>
+                                    <td> <span>Configurations: 2 BHK-3 BHK Ind Floor from</span> </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul class="alldetails-project-size-list">
+                                            <li style="color: #000;">1100 Sq. Ft. to 1600 Sq. Ft. (Saleable)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Project-Size-3 -->
+                    <div class="alldetails-project-size">
+                        <table class="alldetails-project-size-table">
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2"> <img
+                                            src="https://www.eliteproinfra.com/front/images/details-new/icon-3.png">
+                                    </td>
+                                    <td> <span>Properties for Sale</span> </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul class="alldetails-project-size-list">
+                                            <li style="color: #000;">in {{property.title}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="alldetails-request-call-back-sec">
+                    <a href="tel:180030029797">
+                        <button class="alldetails-request-call-back">
+                            <span><i class="fa fa-phone"></i></span>
+                            <small>
+                                Request a Call Back
+                            </small>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+
+            <section class="alldetails-2b">
+                <div class="container">
+                    <div class="row">
+                        <div class="alldetails-1c">
+                            <div class="col-lg-8 col-sm-12 col-xl-8 col-md-12">
+                                <div class="listing-desc-wrap mr-30">
+
+                                    <!--Listing Details starts-->
+                                    <div class="list-alldetails-wrap">
+                                        <div class="alldetails-listing-heading">
+                                            <h4>Overview</h4>
+                                        </div>
+                                        <div id="description" class="list-alldetails-section">
+                                            <div class="overview-content">
+                                                <p class="mb-10">
+                                                </p>
+                                                <h3 style="text-align: center;"><strong>{{property.title_overview}}</strong></h3>
+                                                <p>{{property.description_overview}}</p>
+                                                <h4>{{property.title_one}}</h4>
+                                                <p>{{property.des_one}}</p>
+                                                <h4>{{property.title_two}}</h4>
+                                                <p>{{property.des_two}}</p>
+                                                <h4>{{property.title_three}}</h4>
+                                                <p>{{property.des_three}}</p>
+                                                <h4>{{property.title_four}}</h4>
+                                                <p>{{property.des_four}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Listing Details starts-->
+                                    <div class="list-alldetails-wrap">
+                                        <div class="alldetails-listing-heading">
+                                            <h4>Payment Plan</h4>
+                                        </div>
+                                        <div id="payment" class="list-alldetails-section">
+                                            <div class="pricelisttable">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th align="left" valign="middle">Unit Type</th>
+                                                            <th align="center" valign="middle">Area</th>
+                                                            <th align="center" valign="middle">Price*</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td td="" align="left" valign="middle"> <span>3 Bhk</span>
+                                                            </td>
+                                                            <td td="" align="left" valign="middle"> <span>{{property.area_min}}</span>
+                                                            </td>
+                                                            <td td="" align="left" valign="middle"> <span>{{property.price_min}}</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Listing Details starts-->
+                                    
+                                    <div class="list-alldetails-wrap">
+                                        <div class="alldetails-listing-heading">
+                                            <h4>Amenities</h4>
+                                        </div>
+
+                                        <div id="amenities" class="list-alldetails-section">
+                                            <div class="row amenitiesshift">
+                                                {% for each in property.amenities.all %}
+                                                <div class="alldetails-amenities-list">
+                                                    <img src="{{ each.image.url }}">
+                                                    <h4>{{ each.name }}</h4>
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                   
+                                    <!-- Listing Details starts-->
+                                    <!-- <div class="list-alldetails-wrap">
+                                        <div class="alldetails-listing-heading">
+                                            <h4>Questions and Answers</h4>
+                                        </div>
+                                        <div id="faq" class="down-question-answer">
+                                            <div class=" faq-section">
+                                                <div class="list-alldetails-wrap">
+                                                    <div id="accordion1" role="tablist">
+                                                        <div class="card">
+                                                            <div class="card-header" role="tab" id="headingOne">
+                                                                <a role="button" data-toggle="collapse"
+                                                                    data-parent="#accordion1" href="#collapseOne_4"
+                                                                    aria-expanded="false" aria-controls="collapseOne_4"
+                                                                    class="collapsed">Where M3M Capital 113 is
+                                                                    located?</a>
+                                                            </div>
+                                                            <div id="collapseOne_4" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-labelledby="headingOne">
+                                                                <div class="card-body">M3M Capital 113 is located in
+                                                                    Dwarka Expressway Gurgaon, just a few steps away
+                                                                    from Delhi Border.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header" role="tab" id="headingOne">
+                                                                <a role="button" data-toggle="collapse"
+                                                                    data-parent="#accordion1" href="#collapseOne_5"
+                                                                    aria-expanded="false" aria-controls="collapseOne_5"
+                                                                    class="collapsed">Which is the nearest metro station
+                                                                    from M3M Capital location?</a>
+                                                            </div>
+                                                            <div id="collapseOne_5" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-labelledby="headingOne" >
+                                                                <div class="card-body">The closest metro station to M3M
+                                                                    Capital is Dwarka sector 21 metro station.</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header" role="tab" id="headingOne">
+                                                                <a role="button" data-toggle="collapse"
+                                                                    data-parent="#accordion1" href="#collapseOne_6"
+                                                                    aria-expanded="false" aria-controls="collapseOne_6"
+                                                                    class="collapsed">What is the name of the builder
+                                                                    constructing this project?</a>
+                                                            </div>
+                                                            <div id="collapseOne_6" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-labelledby="headingOne" >
+                                                                <div class="card-body">Builder is M3M India</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header" role="tab" id="headingOne">
+                                                                <a role="button" data-toggle="collapse"
+                                                                    data-parent="#accordion1" href="#collapseOne_7"
+                                                                    aria-expanded="false" aria-controls="collapseOne_7"
+                                                                    class="collapsed">Is the project having a registered
+                                                                    RERA number?</a>
+                                                            </div>
+                                                            <div id="collapseOne_7" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-labelledby="headingOne">
+                                                                <div class="card-body">The Project registered on RERA
+                                                                    the project RERA Is RERA-GRG-PROJ-1006-2022</div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 col-xl-4 col-md-12 posit"
+                                style="position: relative;">
+                                <div id="list-sidebar" class="listing-sidebar">
+                                    <div class="inner-wrapper-sticky" style="position: relative;">
+                                        <div class="widget mortgage-widget">
+                                            <h3 class="widget-title"><span class="amwd-floating-phone phone"><i
+                                                        class="fa fa-envelope"></i></span> Contact our Real Estate
+                                                Experts</h3>
+                                            <form class="myForm" 
+                                                method="POST" enctype="multipart/form-data"  name='contact_now' novalidate="">{% csrf_token %}
+                                                <input type="hidden" name="_token"
+                                                    value="iPMRUYEkqQVBK8iYR9jMYuZcXWJCjPaBOI3Vy3Dq"> <input
+                                                    type="hidden" name="redirect_url"
+                                                    value="properties/m3m-capital-113-gurgaon">
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="text" name="name"
+                                                        placeholder="Enter Name" required="">
+                                                </div>
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="email" name="email"
+                                                        placeholder="Email Id" required="">
+                                                </div>
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="number" name="mobile_number"
+                                                        placeholder="Phone Number" required="">
+                                                </div>
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="text" name="city"
+                                                        placeholder="City" required="">
+                                                </div>
+                                                <div class="mortgage-btn">
+                                                    <button type="submit" name="contact" data-toggle="modal"
+                                                        data-target="#mortgage_result">Contact Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</Section>
+
+<script>
+</script>
+{% include 'footer.html' %}
+{% endblock %}

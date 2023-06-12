@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gurgaon Heights - A Real Estate Website </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/png">
+
+<!-- css --> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/static/materialize/css/materialize.min.css" media="screen,projection" />
+<link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/static/css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
+<link href="/static/css/flexslider.css" rel="stylesheet" /> 
+<link rel="stylesheet" type="text/css" href="/static/css/zoomslider.css" />
+<link href="/static/css/style.css" rel="stylesheet" />
+  
+
+</head>
+<style>
+    .logo{
+        height: 288%;
+        margin-top: -14px !important;
+    }
+    .navbar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        background-color: transparent !important;
+        z-index: 9999 !important;
+      }
+      .navbar.scrolled {
+        background-color: #dbdbdb !important;
+        color:black;
+        font-size: inherit !important;
+      }
+</style>
+<body>
+<div id="wrapper" class="home-page"> 
+		
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'index' %}"><img class="logo" src="/static/img/Front.png" alt="">
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="HillSide"><a class="waves-effect waves-dark" href="{% url 'index' %}">Home</a></li> 
+                        <li><a class="waves-effect waves-dark" href="{% url 'about' %}">About</a></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">Properties<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="waves-effect waves-dark" href="{% url 'residential' %}">Residential</a></li>
+                                <li><a class="waves-effect waves-dark" href="{% url 'commercial' %}">Commercial</a></li>
+                            </ul>
+                        </li> 
+
+                        <li><a class="waves-effect waves-dark" href="blog.html">Blog</a></li>
+						<li><a class="waves-effect waves-dark" href="{% url 'contact' %}">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+
+    {% block content %}
+
+    {% endblock %}
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/jquery.easing.1.3.js"></script>
+<script src="/static/materialize/js/materialize.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.fancybox.pack.js"></script>
+<script src="/static/js/jquery.fancybox-media.js"></script>
+<script src="/static/js/jquery.flexslider.js"></script>
+<script src="/static/js/animate.js"></script>
+<script src="/static/js/index.js"></script>
+<script src="/static/js/commercialResidential.js"></script>
+<!-- Vendor Scripts -->
+<script src="/static/js/modernizr.custom.js"></script>
+<script src="/static/js/jquery.zoomslider.min.js"></script>
+<script src="/static/js/jquery.isotope.min.js"></script>
+<script src="/static/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/js/animate.js"></script>
+<script src="/static/js/custom.js"></script>
+    <script>
+       
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.querySelector(".navbar").classList.add("scrolled");
+            console.log("scolled added");
+          } else {
+            document.querySelector(".navbar").classList.remove("scrolled");
+            console.log("scolled removed");
+          }
+        }
+
+    </script>
+</body>
+
+</html>

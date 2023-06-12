@@ -1,0 +1,345 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/materialize/css/materialize.min.css" media="screen,projection" />
+<link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="/static/css/flexslider.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/static/css/zoomslider.css" />
+<link href="/static/css/style.css" rel="stylesheet" />
+<link href="/static/css/index.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- icons fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .w3-border {
+        border: none !important;
+    }
+    
+    .w3-black {
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+    }
+    
+    .w3-bar {
+        width: 30%;
+    }
+    .w3-bar::before{
+        content: none !important;
+    }
+    .w3-bar::after{
+        content: none !important;
+    }
+    .w3-red, .w3-hover-red:hover {
+        color: #fff!important;
+        background-color: #b49141!important;
+    }
+</style>
+
+<!-- Pop up modal starts -->
+<div id="mpopupBox" class="mpopup">
+    <div class="popupform">
+        <div class="modal-header">
+            <span class="close">×</span>
+            <h2>Enquire Now</h2>
+        </div>
+        <div class="modalCont2">
+            <div class="modal-footer" style="padding: 0px; width: 40%; border: none;">
+                <div class="container modal2" style="text-align: center; width: 100%;">
+                    <h3>We Promise</h3>
+                    <div class="">
+                        <div class="container pop_up_promise" style=" width: 100%; margin: 2rem 0px;">
+                            <img class="my-2 modalimg" src="{% static '/img/callbackimg.png' %}" style="height: 4rem;">
+                            <p class="txt" style="text-align : center;">Instant Call Back</p>
+                        </div>
+                        <div class="container pop_up_promise" style=" width: 100%; margin: 2rem 0px;">
+                            <img class="my-3 modalimg" src="{% static '/img/img2.png' %}" style="height: 4rem;">
+                            <p class="txt" style="text-align : center;">Unmatched Price</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-form" style="width:60%">
+                <!-- <h6>Fill details  Below</h6> -->
+                <form>
+                    <input name="name" type="text" class="feedback-input" placeholder="Name" />
+                    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                    <input name="mobile_number" type="number" class="feedback-input" placeholder="Mobile Number" />
+                    <textarea name="text" class="feedback-input" rows="1"
+                        placeholder="Drop your message...."></textarea>
+                    <button type="submit" name="equire_now" class="feedback-input">Submit
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pop up modal ends -->
+<!-- section start -->
+<section id="banner">
+    <!-- Slider -->
+    <div id="demo-1"
+        data-zs-src='["/static/img/photos/img1.jpg", "/static/img/photos/img2.jpg", "/static/img/photos/img3.jpg"]'
+        data-zs-overlay="dots">
+        <div class="demo-inner">
+            <div class="intext">
+                <h1 class="aligncenter" style="font-weight: 700;
+                color: white;">Experience luxury with Us</h1>
+                <!-- <h1 class="headtxt aligncenter"></h1> -->
+
+                <form method="post" class="header_search_form aligncenter">{% csrf_token %}
+                    <select class="city_select" name="city" style="display: block;" required>
+                        <option value="{{each.id}}">--select--</option>
+                        {% for each in cities %}
+                        <option value="{{each.id}}">{{ each.name }}</option>
+                        {% endfor %}
+
+                    </select>
+                    <input class="search_input" name="location" type="text" placeholder="Enter locality" required>
+                    <button class="search_btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end slider -->
+</section>
+<!-- section end -->
+
+<!-- section start -->
+<section class="projects">
+    <div class="container">
+        <div class="row marg">
+            <div class="col-md-12">
+                <div class="aligncenter">
+                    <h2 class="aligncenter">What are you loking for?</h2>Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident,
+                    <br />doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt..
+                </div>
+                <br />
+            </div>
+        </div>
+        <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'London')">Residential</button>
+            <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Commercial</button>
+            <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">SCO</button>
+        </div>
+
+        <div id="London" class="w3-container w3-border city">
+
+            <div class="row service-v1 margin-bottom-40">
+                {% for each in properties %}
+                <div class="col-md-4 md-margin-bottom-40">
+                    <div class="card small">
+                        <div class="card-image" style="height : 16rem">
+                            <a href="{% url 'residential_Single_Listing' each.slug %}">
+                                <img class="img-responsive" style="height : 16rem"
+                                    src="{% for each2 in each.image.all|slice:':1' %}{{each2.image.url }}{% endfor %}"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h3>{{each.title}}</h3>
+                            <p>
+                            <h4>{{each.location}} , {{each.city}}</h4>
+                            <h4>{{each.area_min}}-{{each.area_max}} sq.ft</h4>
+                            <span class="price">{{ each.price_min}} Lakhs - {{ each.price_max}} Lakhs </span>
+                            <a href="{% url 'residential_Single_Listing' each.slug %}"
+                                class="btn btn-details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+
+
+            </div>
+            <a class="btn btn-primary property_btn" href="{% url 'residential' %}">View all Properties</a>
+        </div>
+
+
+        <div id="Paris" class="w3-container w3-border city" style="display:none">
+            <div class="row service-v1 margin-bottom-40">
+                {% for each in commercial %}
+                <div class="col-md-4 md-margin-bottom-40">
+                    <div class="card small">
+                        <div class="card-image" style="height : 16rem">
+                            <a href="{% url 'commercial_Single_Listing' each.slug %}">
+                                <img class="img-responsive" style="height : 16rem"
+                                    src="{% for each2 in each.image.all|slice:':1' %}{{each2.image.url }}{% endfor %}"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h3>{{each.title}}</h3>
+                            <p>
+                            <h4>{{each.location}} , {{each.city}}</h4>
+                            <h4>{{each.area_min}}-{{each.area_max}} sq.ft</h4>
+                            <span class="price">{{ each.price_min}} Lakhs - {{ each.price_max}} Lakhs </span>
+                            <a href="{% url 'commercial_Single_Listing' each.slug %}"
+                                class="btn btn-details">Details</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+
+
+            </div>
+            <a class="btn btn-primary property_btn" href="{% url 'commercial' %}">View all Properties</a>
+        </div>
+
+        <div id="Tokyo" class="w3-container w3-border city" style="display:none">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+
+    </div>
+</section>
+<!-- section end -->
+
+
+<section class="services">
+    <div class="row marg">
+        <div class="col-md-12">
+            <div class="aligncenter" style="width:80%; margin:auto">
+                <h2 class="aligncenter">About US</h2>Welcome to Gurgaon Heights, a premier real estate Advisory services
+                firm based in Gurgaon. Our mission is to provide our clients with the highest level of service and
+                expertise in the real estate industry. With years of experience in the Gurgaon real estate market, we
+                have established ourselves as a trusted and reliable source for all your real estate needs.
+            </div>
+            <br />
+        </div>
+    </div>
+    <div class="container1">
+
+        <img src="https://www.constructionworld.in/assets/uploads/09edbe0dd16d948ef2e2fbbf8385d359.jpg" alt="">
+        <div class="abt_cont">
+            <p class="p1">We Help You Buy, Occupy & Invest in Real Estate Assets.</p>
+            <p class="p2">At Gurgaon Heights, we specialize in assisting clients with buying, selling, and renting
+                residential and commercial properties. Our team of highly skilled and experienced professionals is
+                dedicated to providing you with personalized attention and tailored solutions to meet your specific
+                requirements.</p>
+            <p class="p3">Whether you are looking for a luxurious apartment, a spacious villa, or a commercial space for
+                your business, we have an extensive database of properties that are available for sale or rent. We also
+                provide assistance with property valuation, legal documentation, and financing to ensure a hassle-free
+                and seamless transaction.</p>
+            <p class="p3">At Gurgaon Heights, we are committed to providing our clients with the highest level of
+                satisfaction by delivering exceptional customer service and meeting their real estate needs with
+                integrity and professionalism. Contact us today to learn more about how we can assist you with your real
+                estate needs in Gurgaon.</p><br>
+            <a href="" class="btn btn-details det1">Read More!</a>
+        </div>
+    </div>
+
+</section>
+
+<section class="details">
+    <div class="detail1">
+        <i class="fa fa-smile-o" style="font-size:48px;color:#b49141"></i>
+        <h3 class="det_h3">00000+</h3>
+        <p>Happy Customers</p>
+    </div>
+    <div class="detail2">
+        <i class="fa fa-line-chart" style="font-size:48px;color:#b49141"></i>
+        <h3 class="det_h3">00 milion sq.ft.</h3>
+        <p>Area Sold</p>
+    </div>
+    <div class="detail3">
+        <i class="fa fa-users" style="font-size:48px;color:#b49141"></i>
+        <h3 class="det_h3">000+</h3>
+        <p>Skilled Professionals</p>
+    </div>
+    <!-- <div class="detail4">
+        
+    </div> -->
+</section>
+
+<section class="why_us">
+    <div class="row marg" style="margin-bottom: 0px;">
+        <div class="col-md-12">
+            <div class="aligncenter" style="padding : 0px 30px;">
+                <h2 class="aligncenter">Why choose us?</h2>
+                <p>"Gurgaon Heights: Your Gateway to Hassle-Free Real Estate Transactions in Gurgaon!" <br />"Experience
+                    Exceptional Service and Expertise with Gurgaon Heights for a Seamless Real Estate Journey."</p>
+            </div>
+            <br />
+        </div>
+    </div>
+    <div class="container1">
+        <div class="whyus_cont">
+            <h3>CHOOSE A PRO, LIKE A PRO!</h3>
+            <p>Gurgaon Heights is a real estate agency in Gurgaon that offers a team of highly skilled professionals
+                with extensive knowledge of the local market. They provide personalized attention and tailored solutions
+                to meet each client's unique requirements. With a vast database of residential and commercial
+                properties, they assist clients in finding the perfect property within their budget</p><br>
+            <p>Gurgaon Heights ensures hassle-free transactions by providing end-to-end assistance and conducting
+                business with professionalism and integrity. Clients can expect exceptional customer service, expert
+                guidance, and a positive real estate experience when working with Gurgaon Heights.</p><br>
+            <a href="" class="btn btn-details det1">Read More!</a>
+        </div>
+        <img class="whyus_img"
+            src="https://blog.authenticjourneys.info/wp-content/uploads/2016/10/gd-group-discussion-tips.jpg" alt="">
+    </div>
+</section>
+
+<section class="connectUs">
+    <h2 class="connectH2">CONNECT WITH US</h2>
+    <p class="connectp">With our umbrella of realty solutions, we are available 24x7 to help you.</p>
+    <div class="connect_cards">
+        <div class="connect_card">
+            <div class="soc_icon">
+                <i style="color: rgb(27, 197, 64)" class="fa fa-whatsapp"></i>
+            </div>
+            <div class="card_cont">
+                <h6 class="">Connect On</h6>
+                <h3 class="">WhatsApp</h3>
+                <a href="" class="btn btn-details det1">Connect</a>
+            </div>
+        </div>
+
+        <div class="connect_card">
+            <div class="soc_icon">
+                <i style="color: rgb(148, 40, 40)" class="fa fa-map-marker"></i>
+            </div>
+            <div class="card_cont">
+                <h6 class="">Book an</h6>
+                <h3 class="">Appointment</h3>
+                <a href="" class="btn btn-details det1">Book</a>
+            </div>
+
+        </div>
+
+        <div class="connect_card">
+            <div class="soc_icon">
+                <i style="color: rgb(66, 149, 218)" class="fa fa fa-video-camera"></i>
+            </div>
+            <div class="card_cont">
+                <h6 class="">Schedule a</h6>
+                <h3 class="">Video Call</h3>
+                <a href="" class="btn btn-details det1">Schedule</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+{% include 'footer.html' %}
+{% endblock %}

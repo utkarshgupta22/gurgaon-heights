@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<style>
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 15rem !important;
+    }
+    .cont{
+        width: 60%;
+        margin: auto;
+        text-align: justify;
+        margin-bottom: 60px;
+        color: black;
+    }
+</style>
+<section>
+    <h2>Copyright</h2>
+    <div class="cont">
+        <p class="p1">The content on our website is owned by Gurgaon Heights and cannot be used for commercial purposes or modified without our permission.</p>
+        <p class="p2">Our website includes various images and graphics that do not belong to Gurgaon Heights. These are included for reference purposes only, and full credit and copyrights belong to their rightful owner.</p>
+    </section>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}

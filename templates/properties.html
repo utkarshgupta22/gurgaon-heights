@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/properties.css" />
+
+<section class="div-height">
+    <div class="headline">
+        <h1 class="comm-headline">
+            Properties For You
+        </h1>
+    </div>
+</section>
+
+<section class="search_bar">
+    <div class="search_box">
+        <form action="" class="search_form">
+            <div class="select">
+                <select name="city" id="">
+                    <option value="">Delhi</option>
+                    <option value="">Gurgaon</option>
+                </select>
+            </div>
+            <div class="search_input">
+                <input type="text" placeholder="     Search Properties ....">
+            </div>
+            <div class="search_btn">
+                <button>Search</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section>
+
+    <div class="blog-area" style="background-color: #f8f8f8;">
+        <div class="container blog_area_cont">
+            <div class="row">
+                <!--Blog post starts-->
+                <div class="col-xl-8 col-lg-8 order-xl-12 order-xl-1 order-1 left-container">
+                    <div class="container card_cont">
+                        <!-- Start -->
+                        {% for each in properties %}
+                        <div class="amwd-project-sec-main-border">
+                            <div class="row box-row property_listing_setting">
+                                <div class="col-md-5" style="padding: 0px;">
+                                    <div class="row box-row">
+                                        <!-- Img -->
+                                        <div class="property-item">
+                                            <a class="property-img"
+                                                href="{% url 'residential_Single_Listing' each.slug %}"><img
+                                                    src="{% for each2 in each.image.all|slice:':1' %}{{each2.image.url }}{% endfor %}" 
+                                                    alt="#"></a>
+                                            <ul class="feature_text">
+                                                <li class="feature_cb"><span>Residential</span></li>
+                                                <li class="feature_or"><span>New Launch</span></li>
+                                            </ul>
+                                            
+                                        </div>
+                                        <!-- Img -->
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="col-md-7">
+                                    <div class="amwd-project-list_details_body">
+                                        <h2 class="amwd-project-list_h2">
+                                            <div class="amwd-project-list_pt"><a href="" style="color:#000;">
+                                                   <strong> {{each.title}}</strong></a></div>
+                                            <span class="amwd-project-list_span">
+                                                <span class="amwd-project-list_span_i1"><i
+                                                        class="fa fa-map-marker"></i>
+                                                    {{each.location}}, {{each.city}}</span>
+                                            </span>
+                                        </h2>
+                                        <div class="amwd-project-list_p-main">
+                                            <div class="amwd-project-list_p-main2">
+                                                <span class="amwd-project-list_price">₹ {{each.price_min}} Cr - {{each.price_max}} Cr</span>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details">
+                                                <ul class="amwd-project-list_inner_details_ul">
+                                                    <li class="amwd-project-list_inner_details_li">
+                                                        <div class="amwd-project-list_inner_details_area1">{{ each.area_min }}
+                                                            sq.ft. - {{each.area_max}} sq. ft</div>
+                                                    </li>
+                                                    <li class="amwd-project-list_inner_details_li">
+                                                        <div class="amwd-project-list_inner_details_area1">{{each.status}}
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="amwd-project-list_inner_details_des">
+                                            <div>
+                                                <p class="addReadMore showlesscontent">{{each.title_overview}} in {{each.location}}, {{each.city}}</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="amwd-project-list_inner_details_down_b">
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Gym</div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Swimming Pool
+                                                </div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Club House</div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">24*7 Security
+                                                </div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Elevator</div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">CCTV</div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Parking Space
+                                                </div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Cafeteria/Food
+                                                    Court</div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Bar/Lounge</div>
+                                            </div>
+                                            <div class="amwd-project-list_inner_details_down_box">
+                                                <div class="amwd-project-list_inner_details_down_box_t">Power Backup
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="padding: 0px;">
+                                    <div class="amwd-project-list_d_contact">
+                                       <div class="amwd-project-list_d_contact_inner">
+                                          <a href="{% url 'residential_Single_Listing' each.slug %}"><button class="amwd-project-list_d_contact_inner_b1">Details</button></a>
+                                          <button class="amwd-project-list_d_contact_inner_b2">
+                                          <i class="fa fa-phone"></i> 
+                                          <span class="amwd-project-list_d_contact_inner_b2_t">Contact Agent</span>
+                                          </button>
+                                          <a href="https://api.whatsapp.com/send/?phone=919810474360&amp;text=Hi! I'm Interested In DLF One Midtown. Please Share Details." target="_blank">
+                                          <button class="amwd-project-list_d_contact_inner_b3">
+                                          <i class="fas fa-whatsapp"></i> 
+                                          <span class="amwd-project-list_d_contact_inner_b3_t">WhatsApp</span>
+                                          </button>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- Stop -->
+                      
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-sm-12  col-md-12 posit"
+                                style="position: relative;">
+                                <div id="list-sidebar" class="listing-sidebar">
+                                    <div class="inner-wrapper-sticky form_design" style="position: relative;">
+                                        <div class="widget mortgage-widget">
+                                            <h3 class="widget-title"><span class="amwd-floating-phone phone"><i
+                                                        class="fa fa-envelope"></i></span> Contact our Real Estate
+                                                Experts</h3>
+                                            <form class="myForm" 
+                                                method="POST" enctype="multipart/form-data"  name='contact_now' novalidate="">{% csrf_token %}
+                                                <input type="hidden" name="_token"
+                                                    value="iPMRUYEkqQVBK8iYR9jMYuZcXWJCjPaBOI3Vy3Dq"> <input
+                                                    type="hidden" name="redirect_url"
+                                                    value="properties/m3m-capital-113-gurgaon">
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="text" name="name"
+                                                        placeholder="Enter Name" required="">
+                                                </div>
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="email" name="email"
+                                                        placeholder="Email Id" required="">
+                                                </div>
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="number" name="mobile_number"
+                                                        placeholder="Phone Number" required="">
+                                                </div>
+                                                <div class="mortgage-group">
+                                                    <input class="mortgage-field" type="text" name="city"
+                                                        placeholder="City" required="">
+                                                </div>
+                                                <div class="mortgage-btn">
+                                                    <button type="submit" name="contact" data-toggle="modal"
+                                                        data-target="#mortgage_result">Contact Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                <!--Blog post ends-->
+
+
+                <!--Sticy Sidebar starts-->
+                <!-- <div id="sticky-anchor"></div> -->
+                <!-- <div class="buildersidebar" style="position: relative;">
+                    <h3 class="widget-title">
+                        <span class="amwd-floating-phone phone">
+                            <i class="fa fa-envelope"></i></span> Contact our Real Estate Experts
+                    </h3>
+                    <form class="myForm" name="permissions" action="https://www.eliteproinfra.com/send-mail"
+                        method="post" enctype="multipart/form-data" novalidate="">
+                        <input type="hidden" name="_token" value="QyuxtPbiXR04uFGHHa6Czd1AQm8x4tMNhPafEqhN"> <input
+                            type="hidden" name="redirect_url" value="properties">
+                        <div class="mortgage-group">
+                            <input class="mortgage-field" type="text" name="name" placeholder="Enter Name" required="">
+                        </div>
+                        <div class="mortgage-group">
+                            <input class="mortgage-field" type="email" name="email" placeholder="Email Id" required="">
+                        </div>
+                        <div class="mortgage-group">
+                            <input class="mortgage-field" type="tel" name="phone" placeholder="Phone Number"
+                                required="">
+                        </div>
+                        <div class="mortgage-group">
+                            <input class="mortgage-field" type="text" name="city" placeholder="City" required="">
+                        </div>
+                        <div class="amwd-details-form-checked">
+                            <input type="checkbox" name="whatsapp_check" checked=""
+                                data-parsley-multiple="whatsapp_check">
+                            <label class="amwd-details-form-checked-whatsapp">Enable updates through <span><i
+                                        class="fab fa-whatsapp"></i> <strong>WhatsApp</strong></span></label>
+                        </div>
+                        <div class="mortgage-btn">
+                            <button type="submit" data-toggle="modal" data-target="#mortgage_result">Contact
+                                Now</button>
+                        </div>
+                    </form>
+                </div> -->
+                <!-- sticky sidebar ends -->
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}

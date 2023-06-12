@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/contact.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    input{
+        border-radius: 5px !important;
+        width: 98.5% !important;
+    }
+    textarea{
+        border-radius: 5px !important;
+    }
+</style>
+
+<section class="div-height">
+    <div class="headline">
+        <h1>
+            <span class="comm-headline">
+                <span>Contact Us</span>
+            </span>
+        </h1>
+
+    </div>
+</section>
+
+
+<section>
+    <div class="contact_us_info">
+        <div class="container">
+            <div class="row contact_us_info_design">
+                <div class="contact_us_Details">
+                    <i class="fa fa-phone"></i>
+                    <h4>Phone</h4>
+                    <p> (+91) 9810933566</p>
+                </div>
+                <div class="contact_us_Details">
+                    <i class="fa fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>info@gurgaonheights.com</p>
+                </div>
+                <div class="contact_us_Details">
+                    <i class="fa fa-globe"></i>
+                        <h4>Website</h4>
+                        <p> www.gurgaonheights.com</p>
+                </div>
+                <div class="contact_us_Details">
+                    <i class="fa fa-map-marker"></i>
+                        <h4>Office</h4>
+                        <p style="">EPO 720, 7th Floor, Emaar Emerald Plaza, Sector 65 Gurgaon Haryana 122002 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-section mapview formcontent">
+        <div class="container form-cont">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.4433986221925!2d77.06543592520832!3d28.405874775789254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d22689d145c33%3A0xb70c9f69827b3!2sEmerald%20Plaza!5e0!3m2!1sen!2sin!4v1683624922401!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-lg-6  col-md-12">
+                    <div class="section-title content">
+                        <h2>Write to us</h2>
+                    </div>
+                    <form class="contact_form myForm" name="write_to_us"  method="POST"
+                        enctype="multipart/form-data" novalidate="">{% csrf_token %}
+                        <div class="form-control-wrap">
+                            <div id="message" class="alert alert-danger alert-dismissible fade"></div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="fname" placeholder="Your Full Name*" name="name"
+                                    required="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="mobile" placeholder="Your Mobile No.*" name="mobile_number"
+                                    required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email_address"
+                                    placeholder="Write Your Email Address*" name="email" required="">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="8" name="message" id="comment"
+                                    placeholder="Your Message" required=""></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="write_to_us" class="btn-show">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}

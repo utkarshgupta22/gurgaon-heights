@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/commercial.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<section class="div-height">
+    <div class="headline">
+        <h1 class="comm-headline" >
+            Commercial
+        </h1>
+    </div>
+</section>
+
+<section class="shiftcomm">
+    <div class="row listing_div service-v1 margin-bottom-40">
+        {% for each in property %}
+          <div class="col-md-4 md-margin-bottom-40">
+            <div class="card small">
+                <div class="card small-item">
+                    <div class="card-image">
+                        <a href="{% url 'commercial_Single_Listing' each.slug %}"> <img  class="img-responsive" src="{% for each2 in each.image.all|slice:':1' %}{{each2.image.url }}{% endfor %}" alt=""></a>
+                    </div>
+                    <ul class="feature-text">
+                        <li class="feature-text-item1">
+                            <span>Commercial</span>
+
+                        </li>
+                        <li class="feature-text-item2">
+                            <span>New Launch</span>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <h4>{{ each.title }}</h4>
+                    <div class="property-location">
+               
+                        <p><span class="top-map-marker"><i class="fa fa-map-marker"></i></span> {{each.location}}</p>
+                    </div>
+
+                    <ul class="property-feature">
+                        <li> <i class="material-icons"></i>
+                            <span>{{each.area_min}} - {{each.area_max}}</span>
+                        </li>
+
+                    </ul>
+                    <div class="trending-bottom">
+                        <div class="trend-left float-left">
+                            <ul class="product-rating">
+                                <li><i class="fa fa-star checked"></i></li>
+                                <li><i class="fa fa-star checked"></i></li>
+                                <li><i class="fa fa-star checked"></i></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                        </div>
+                        <a class="trend-right float-right">
+                            <div class="trend-open">
+                                <p><span class="per_sale">starts from</span>/₹{{each.price}}CR*</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}
